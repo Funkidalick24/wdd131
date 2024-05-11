@@ -73,7 +73,7 @@ header {
   .grid{
     padding: 10px;
     display: grid;
-    grid-template: 1fr ;
+  
   
 
 }
@@ -100,7 +100,6 @@ header {
   padding: 10px;
   
     display: grid;
-    grid-template: 1fr  ;
     grid-gap: 30px;
 
   }
