@@ -148,3 +148,6 @@ a:hover{
   grid-column: 1/3;
   padding: 20px;
 }
+main{
+  max-width: fit-content;
+}
