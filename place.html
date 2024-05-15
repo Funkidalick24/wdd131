@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name: description content="WDD 131 - Dynamic Web Fundamentals - Farai Dandara">
+    <meta name="author" content="FARAI DANDARA">
+    <title>Harare</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Harare, Zimbabwe</h1>
+    </header>
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <picture>
+                <!-- WebP image for desktop -->
+                <source srcset="images/zim-large.webp" media="(min-width: 1000px)"">
+                <!-- WebP image for mobile -->
+                <source srcset="images/zim-medium.webp" media="(min-width: 500px)">
+                <!-- Fallback image for browsers that do not support WebP -->
+                <img src="images/zim-small.webp" alt="LAGOS" width="500" height="700">
+            </picture>
+        </section>
+
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <section class="weather-head">
+                <h2>Weather</h2> 
+                <span><img src="images/weather-icon.svg" alt="Weather Icon"></span>
+                <!-- Weather details -->
+            </section>
+            <div class="weather-list">
+                <div class="first">
+                    <p>Temperature:</p>
+                    <p>Conditions:</p>
+                    <p>Wind:</p>
+                    <p>Windchill:</p>
+                </div>
+                <div class="second">
+                    <p>23°C</p>
+                    <p>Partly Cloudy</p>
+                    <p>18km/h</p>
+                    <span id="windchill">N/A</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="data">
+            <section class="data-head">
+                <h2>Data</h2> 
+                <span><img src="images/weather-icon.svg" alt="Weather Icon"></span>
+                <!-- Weather details -->
+            </section>
+            <div class="weather-list">
+                <div class="first">
+                    <p>Area: </p>
+                    <p>Population: </p>
+                    <p>Capital: </p>
+                    <p>Languages: </p>
+                    <p>Currency: </p>
+                    <p>Time Zone: </p>
+                    <p>Calling Code: </p>
+                </div>
+                <div class="second">
+                    <p>390,757 sq km</p>
+                    <p>16,971,382</p>
+                    <p>Harare</p>
+                    <p>English, Shona, Ndebele</p>
+                    <p>Zimbabwe Gold (zig)</p>
+                    <p>+2:00 (CAT)</p>
+                    <p>+263</p>
+                    
+                </div>        
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Include the current year and last modified date using JavaScript -->
+        <h3> <span id="currentYear"></span> ©️ Farai Confidence Dandara Harare Zimbabw Last modified: <span id="lastModified"></span></h3>
+    </footer>
+</body>
+</html>
