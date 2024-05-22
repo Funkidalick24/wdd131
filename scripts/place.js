@@ -1,23 +1,20 @@
-// Function to calculate windchill
+const currentYear = document.getElementById('currentyear');
+currentYear.textContent = new Date().getFullYear();
+
+const lastModified = document.getElementById('lastModified');
+lastModified.textContent = (document.lastModified);
+
+const temperature = 74
+const windSpeed = 14
+
 function calculateWindChill(temperature, windSpeed) {
-    if (temperature <= 10 && windSpeed > 4.8) {
-        return 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
+    if (temperature <= 50 && windSpeed > 3) {
+        const windChill = 35.74 + 0.6215 * temperature - 35.75 * (windSpeed ** 0.16) + 0.4275 * temperature * (windSpeed ** 0.16);
+        const roundedWindChill = Math.round(windChill * 100) / 100;
+        return roundedWindChill
     } else {
         return "N/A";
     }
 }
-
-// Display windchill on page load
-window.addEventListener('load', function () {
-    const temperature = 23; // Static temperature value for example
-    const windSpeed = 18; // Static wind speed value for example
-    const windchill = document.getElementById('windchill');
-    const result = calculateWindChill(temperature, windSpeed);
-    windchill.textContent = result + "°C"; // Display windchill on the page
-});
-
-// Display current year and last modified date in the footer
-const currentYear = new Date().getFullYear();
-const lastModified = document.lastModified;
-document.getElementById('currentYear').textContent = currentYear;
-document.getElementById('lastModified').textContent = lastModified;
+const windChillFactor = document.querySelector("#windchill-factor");
+windChillFactor.textContent = calculateWindChill(temperature, windSpeed);
