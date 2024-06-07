@@ -75,11 +75,9 @@ nav a:hover{
     color: white;
 }
 .colored{
-    color: rgb(129, 129, 240);
+    color: var(--primary-color);
 }
-span{
-    color: black;
-}
+
 img{
     width: 200px;
 }
